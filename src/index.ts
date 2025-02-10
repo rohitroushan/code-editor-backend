@@ -6,7 +6,7 @@ require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json({limit: '50mb'}));
-let origins:string[] = ['http://localhost:3000'];
+let origins:string[] = ['https://code-editor-frontend-omega.vercel.app'];
 app.use(cors({origin: origins,credentials: true }));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.json());
